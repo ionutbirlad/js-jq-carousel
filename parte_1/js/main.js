@@ -14,12 +14,12 @@ $(document).ready(function() {
     $(".prev").click(function () {
       prevSlide();
     });
-    $(".slider-nav label").click(function () {
-      if (!($(this).hasClass("active"))) {
-        $(".slider-nav i").removeClass("active");
-        $(this).addClass("active");
-      }
-    });
+    // $(".slider-nav label").click(function () {
+    //   if (!($(this).hasClass("active"))) {
+    //     $(".slider-nav i").removeClass("active");
+    //     $(this).addClass("active");
+    //   }
+    // });
 
 
     // Definisco le funzioni nextImage e prevImage
