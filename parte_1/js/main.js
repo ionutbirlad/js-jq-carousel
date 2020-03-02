@@ -7,12 +7,18 @@ $(document).ready(function() {
     $('.prev').click(prevSlide);        // Al click richiamo la funzione per aggiornare l'immagine visualizzando la precedente
     */
 
-    // OPzione 2
+    // Opzione 2
     $(".next").click(function () {
       nextSlide();
     });
     $(".prev").click(function () {
       prevSlide();
+    });
+    $(".slider-nav label").click(function () {
+      if (!($(this).hasClass("active"))) {
+        $(".slider-nav i").removeClass("active");
+        $(this).addClass("active");
+      }
     });
 
 
