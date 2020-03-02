@@ -37,6 +37,8 @@
     height: 100%;
     object-fit: cover;
     display: none;
+    cursor: pointer;
+
 }
 
 .images img.active {
@@ -49,7 +51,7 @@
     padding: 10px 15px;
     border-radius: 5px;
     position: absolute;
-    bottom: 20px;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0,0,0,0.5);

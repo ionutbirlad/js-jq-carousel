@@ -3,17 +3,27 @@ $(document).ready(function() {
     // Invoco le funzioni per cambiare slide
 
     /* ==> Opzione 1
-    $('.next').click(nextSlide);        // Al click richiamo la funzione per aggiornare l'immagine visualizzando la successiva
-    $('.prev').click(prevSlide);        // Al click richiamo la funzione per aggiornare l'immagine visualizzando la precedente
+    setInterval(nextSlide, 2000);
     */
 
-    // OPzione 2
-    $(".next").click(function () {
-      nextSlide();
+
+    // Opzione 2
+    // var presentazione = setInterval(function () {
+    //   nextSlide()
+    // }, 2000);
+
+
+    // Opzione 3 ==> blocco mouseenter e sblocco mouseleave
+    $(function() {
+    var interval = setInterval( nextSlide, 2000);
+
+    $('.images').hover(function() {
+        clearInterval(interval);
+    }, function() {
+        interval = setInterval( nextSlide, 2000);
     });
-    $(".prev").click(function () {
-      prevSlide();
-    });
+});
+
 
 
     // Definisco le funzioni nextImage e prevImage
